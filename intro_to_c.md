@@ -75,3 +75,61 @@ int main(){
 + **printf("Hello World!\n");** : prints "Hello World!" and "\n" means starting a new line.  
 + #Notices:  "**;**" must present at the end of each line of code.
 
+This is a simple C program, in which you can understand the basic structure and syntax of all C program: **head files** and ***one*** **main() function**.
+
+---
+
+## C Language Syntax
+After viewing the "Hello World!" program in the previous section, you need to understand more profoundly about the most basic syntax of every C program.
+
+### Comment
+Practically speaking, comment is not the most important structure of programs written in any programming language. If we assume that we work alone, we do not need much comment, because we know what we are doing and what's the meaning and use of every line of code. However, when working on a large project with a team, teammates need to communicate with precision. In this situation, comments among hundreds or even thousands of line of code would come in handy and help the teammates communicate effectively.  Therefore, the efficient use of comment would be a necessary lesson for programmers to learn.
+
+```C
+// This is a type of comments
+
+/* This is also a type of comments*/
+
+/*
+This is a type of comments that
+cross multiple lines
+*/
+```
+
+### Data Type
+Data type is the core of all programming language, it regulates the storage of every variable we define. If the value of a variable exceeds the limits of its storage range, the program would have a overflow problem.  
+Since most modern computers are loaded with 64 bits OS, the values of storage space and range below do not include values of each data type in 32 bits OS. ***(In case you have questions, yes, 64 bits and 32 bits have different value ranges for each data type)***
+
+
+### **For integer type,** 
+
+|Data Type|Storage Space|Value Range|
+|  ----  |  ----  |  ----  |
+| char | 1 byte | -128 ~ 127 or 0 ~ 255 |
+| unsigned char | 1 byte | 0 ~ 255 |
+| signed char | 1 byte | -128 ~ 127 |
+| int | 2 or 4 byte | -32,768 ~ 32,767 or -2,147,483,648 ~ 2,147,483,6470 |
+| unsigned int | 2 or 4 byte | 0 ~ 65,535 or 0 ~ 4,294,967,295 |
+| short | 2 byte | -32,768 ~ 32,767 |
+| unsigned short | 2 byte | 0 ~ 65,535 |
+| long | 4 byte | -2,147,483,648 ~ 2,147,483,6470 |
+| unsigned long | 4 byte | 0 ~ 4,294,967,295 |  
+
+### **For float type,**
+
+|Data Type|Storage Space|Value Range|Precision|
+|  ----  |  ----  |  ----  |  ----  |
+| float | 4 byte | 	1.2E-38 ~ 3.4E+38 | 6 decimal places | 
+| double | 8 byte | 2.3E-308 ~ 1.7E+308 | 15 decimal places |
+| long double | 16 byte | 3.4E-4932 ~ 1.1E+4932 | 19 decimal places |
+
+
+### **For void type,**  
+There are three situation that would allow us to use void type:  
+|No.|Storage Space|
+|  ----  |  ----  | 
+| 1 | The return value of a function is void. ***i.e. void exit(int status)*** | 
+| 2 | The function has no parameter. ***i.e. int rand(void)*** | 
+| 3 | Pointer points to void. i.e. ***void \*malloc(size_t size)*** |
+
+
